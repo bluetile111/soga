@@ -215,7 +215,7 @@ services:
     restart: always
     network_mode: host
     environment:
-      log_level: debug
+      log_level: error
       type: v2board
       api: webapi
       webapi_url: $webapi_url
