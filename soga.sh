@@ -207,7 +207,7 @@ wget -q https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.d
 wget -q https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat -O config/geosite.dat
 
 cat << EOF > docker-compose.yaml
-version: '3.3'
+---
 services:
   $name:
     image: vaxilu/soga:latest
@@ -215,7 +215,7 @@ services:
     restart: always
     network_mode: host
     environment:
-      log_level: error
+      log_level: info
       type: v2board
       api: webapi
       webapi_url: $webapi_url
